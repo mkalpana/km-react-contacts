@@ -12,10 +12,11 @@ class ListContacts extends Component {
   };
 
   render() {
+    const { contacts, onDeleteContact } = this.props;
     return (
       <ol className="contact-list">
         {
-          props.contacts.map(contact => (
+          contacts.map(contact => (
             <li key={contact.id} className="contact-list-item">
               <div className="contact-avatar" style={{
                 backgroundImage: `url(${contact.avatarURL})`
@@ -26,7 +27,7 @@ class ListContacts extends Component {
               </div>
               <button
                 className="contact-remove"
-                onClick={() => props.onDeleteContact(contact)}
+                onClick={() => onDeleteContact(contact)}
               >Remove
               </button>
             </li>
