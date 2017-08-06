@@ -23,13 +23,13 @@ class App extends Component {
         avatarURL: 'http://localhost:5001/joe.jpg'
       }
     ]
-  }
+  };
 
   removeContact = (contact) => {
     this.setState((state) => ({
       contacts: state.contacts.filter(c => c.id !== contact.id)
     }));
-  }
+  };
 
   render() {
     return (

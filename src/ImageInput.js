@@ -7,7 +7,7 @@ const readFileAsDataURL = (file) =>
 
     reader.onload = (event) => {
       resolve(event.target.result);
-    }
+    };
 
     reader.readAsDataURL(file);
   });
@@ -31,7 +31,7 @@ const resizeImage = (imageURL, canvas, maxHeight) =>
       context.drawImage(image, 0, 0, image.width, image.height);
 
       resolve(canvas.toDataURL('image/jpeg'));
-    }
+    };
 
     image.src = imageURL;
   });
